@@ -1,5 +1,4 @@
 // 柯里化部分求值，遍历当月的消费记录，只有在不输入消费值的时候才输出本月总消费
-
 const currying = function(fn) {// 接收一个函数将它修饰成柯里化函数
     const args = [];
     return function() {
