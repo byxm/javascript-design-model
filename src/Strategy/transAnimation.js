@@ -72,3 +72,5 @@ const div = document.getElementById('div');
 const animate = new Animate(div)
 
 animate.start('left',500,1000,'strongEaseOut')
+
+module.exports = Animate;
