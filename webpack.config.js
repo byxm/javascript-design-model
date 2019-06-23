@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 
-
 function getCurrentDirDate() {
     let allPages = [];
     fs.readdirSync(path.join(__dirname, 'src')).forEach(entries => {
@@ -12,23 +11,23 @@ function getCurrentDirDate() {
         if (fs.statSync(fullDir).isDirectory()) {
             const entry = fs.readdirSync(fullDir);
             const onwPage = entry.reduce((ety, dir) => {
-                const fileEntry = path.join(fullDir,dir);
-                if (fs.existsSync(fileEntry) && /\.js$/.test(fileEntry)) {
-                    ety[dir.replace(/\.js/,'')] = ['webpack-hot-middleware/client?noInfo=true&reload=true',fileEntry]
+                const fileEntry = path.join(fullDir, dir);
+                if (fs.existsSync(fileEntry) && /\.ts$/.test(fileEntry)) {
+                    ety[dir.replace(/\.ts/, '')] = ['webpack-hot-middleware/client?noInfo=true&reload=true', fileEntry];
                 }
                 return ety;
             }, {});
-            allPages.push(onwPage)
+            allPages.push(onwPage);
         }
-    })
+    });
 
-    const realPages = allPages.reduce((preEntry,nextEntry)=>{
-            return Object.assign(preEntry,nextEntry)
-    },{})
+    const realPages = allPages.reduce((preEntry, nextEntry) => {
+        return Object.assign(preEntry, nextEntry);
+    }, {});
 
-    return realPages
+    return realPages;
 }
-const entryDir = getCurrentDirDate()
+const entryDir = getCurrentDirDate();
 module.exports = {
     mode: 'development',
     devtool: 'cheap-module-eval-source-map',
@@ -40,6 +39,13 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'awesome-typescript-loader',
+                },
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
