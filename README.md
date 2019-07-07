@@ -3,3 +3,4 @@
 
 ## 目录
 1. [单例模式](https://github.com/byxm/javascript-design-model/tree/master/src/Singleton)
+2. [策略模式](https://github.com/byxm/javascript-design-model/tree/master/src/Strategy)
