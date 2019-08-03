@@ -7,6 +7,8 @@
 ## 透明性带来的安全性问题
 正如可以往组合对象里面叠加新的节点的情况一样。只有往组合对象里面才能添加叶节点，叶对象里面不能够添加叶对象，为了避免这种情况只有先人为的add方法里面添加判断情况。
 
+<img src='./images/companyCommand.png' >
+
 ```typescript
 
 interface ICommandObject {

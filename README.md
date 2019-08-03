@@ -7,3 +7,4 @@
 3. [代理模式](https://github.com/byxm/javascript-design-model/tree/master/src/ProxyModal)
 4. [发布-订阅模式](https://github.com/byxm/javascript-design-model/tree/master/src/Observer)
 5. [命令模式](https://github.com/byxm/javascript-design-model/tree/master/src/CommandModal)
+6. [组合模式](https://github.com/byxm/javascript-design-model/tree/master/src/CombinationModal)
