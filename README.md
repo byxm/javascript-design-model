@@ -9,3 +9,4 @@
 5. [命令模式](https://github.com/byxm/javascript-design-model/tree/master/src/CommandModal)
 6. [组合模式](https://github.com/byxm/javascript-design-model/tree/master/src/CombinationModal)
 7. [模板方法模式](https://github.com/byxm/javascript-design-model/tree/master/src/TemplateMethod)
+8. [享元模式](https://github.com/byxm/javascript-design-model/tree/master/src/FlyweightModal)
